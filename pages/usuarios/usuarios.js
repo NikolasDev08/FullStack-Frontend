@@ -1,6 +1,6 @@
 async function buscarInformacaoNoBackend() {
     const main = document.querySelector("main")
-    const persons = await fetch("http://localhost:3333").then((response) => response.json())
+    const persons = await fetch("https://full-stack-backend-three.vercel.app/").then((response) => response.json())
     persons.map((person) => {
         main.innerHTML += `
             <section id="${person.id}">
