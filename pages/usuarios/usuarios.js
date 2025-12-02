@@ -1,6 +1,5 @@
 async function buscarInformacaoNoBackend() {
     const main = document.querySelector("main")
-    
     const persons = await fetch("http://localhost:3333").then((response) => response.json())
     persons.map((person) => {
         main.innerHTML += `
@@ -13,6 +12,5 @@ async function buscarInformacaoNoBackend() {
         `
     })
 }
-
 
 buscarInformacaoNoBackend()
